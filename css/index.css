@@ -1,0 +1,136 @@
+body{margin:0px;,padding:0px;height:auto;overflow-x:hidden;}
+::selection {color: white;background: black;}
+/*Start Navbar*/
+.textprim{color:#007bff;}
+nav ul img{float:right !important;}
+.navbar-expand-lg .navbar-collapse{direction:rtl;}
+.navbar{padding:0px;}
+.navbar-brand{margin-left:10%;}
+.nav-item a{font-weight:600;color: black;}
+.navbar-nav:nth-child(2){margin-right:10%;}
+.navbar-nav:first-child{margin-right:8%;}
+.navbar-light .navbar-nav .nav-link{color:black;padding-right:20px;}
+nav .dropdown-item {padding:0px;}
+.dropdown-menu{border-radius:3%;margin:0px;padding:0px;min-width:8rem;}
+.dropdown-item>div{padding:5px;width: auto;}
+.dropdown-divider{margin:0px;}
+/* End Navbar*/
+/*Start Home*/
+.home{
+background-image:url('https://image.shutterstock.com/image-photo/daylight-begins-yielding-twilight-crisp-260nw-472318273.jpg');height:540px;background-size:cover;background-repeat:no-repeat;}
+.home .row>div{margin-top:150px;}
+@media screen and (min-width: 300px) and (max-width: 575.98px){
+	.home .row>div{margin-top:20px;}
+}
+.home .row div strong{font-size:3.5rem;}
+.home .row div p{font-size: 20px;}
+.home .row div .btn{border-radius:50px;}
+/*************.btn.focus, .btn:focus {outline:0;box-shadow: none;}****************/
+/*End Home*/
+/*Start About us*/
+#about .row div:nth-of-type(2) p:first-of-type{font-size:18px;}
+#about .row div:nth-of-type(2) h1{color:#333333;font-size:2.3rem}
+#about .row div:nth-of-type(2) h1 span{color:#1ea3ef;}
+@media screen and (min-width: 300px) and (max-width: 575.98px){
+	.mt-5, .my-5 {margin-top: 0rem!important;}
+}
+/*End About us*/
+/*Start How we're different*/
+.different .row:nth-of-type(2) div div div p{font-size:17px;}
+/*End How we're different*/
+/* Start OUR TEACHERS */
+.our-teachers{background-color:#edf4f8;margin-top:100px;}
+.our-teachers .card-img-top {border-radius:0px;}
+.our-teachers .card{border-radius:0px;box-shadow: 0px 5px 5px grey;}
+.card-body p{font-size:18px;}
+@media screen and (min-width: 300px) and (max-width: 575.98px){
+	#app2 *.card {margin-top: 20px!important;}
+}
+@media screen and (min-width: 575.98px) and (max-width: 990px){
+	.our-teacher{margin-right:20px;}
+	#app2 *.card{width:96% !important;}
+}
+/* End OUR TEACHERS */
+/* Start How does it work?*/
+.work{background-image:url('https://lighthousescholar.com/img/high_school2.jpg');background-repeat:no-repeat;background-size: cover;background-position: center;}
+.work .row div h1{font-size:5rem;font-family: 'Abril Fatface', cursive;}
+.work .row div h5{font-size:3rem;font-family: 'Abril Fatface', cursive;}
+@media screen and (min-width: 300px) and (max-width: 575.98px){
+	.container-fluid .container .row:first-of-type div{margin-bottom:20px!important;}
+}
+/* End How does it work?*/
+/*Start TYPES OF STUDENTS WE CAN HELP*/
+.card-menu{border-radius:0px!important;border:none;}
+.card-menu>.list-group:first-child .list-group-item:first-child{border-top-left-radius: 0px;border-top-right-radius:0px;/*background:#f5b509*/}
+.card-menu>.list-group:first-child .list-group-item{background-color:#1d94d8;}
+.card-menu>.list-group:first-child .list-group-item .fas{font-size:25px;}
+.list-group-item{border:1px solid #fff;}
+.bg-ye{background-color:#f5b509;}
+/*End TYPES OF STUDENTS WE CAN HELP*/
+/*Start TYPES OF STUDENTS WE CAN HELP*/
+#university,#graduation-cap,#school,#user-graduate,#torii-gate,#language,#anchor{display:none;}
+#university,#graduation-cap,#school,#user-graduate,#torii-gate,#language,#anchor{height:100%!important;}
+#university .card{border-radius:.25rem !important;}
+/*End TYPES OF STUDENTS WE CAN HELP*/
+/*Start TYPES OF STUDENTS WE CAN HELP  Small screen*/
+.first-dropdown-toggle .dropdown-toggle{width:100% !important;}
+.first-dropdown-toggle .btn{border-radius:0px;background-color:#1d94d8;}
+/*End TYPES OF STUDENTS WE CAN HELP small screen*/
+/* Start  GUARANTEE */
+.GUARANTEE{background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTypuQNIWDN_dUwkakMoXFuo6kwuYHfSG-CvR9FwuiVdTF2vEF');background-size:cover;background-repeat:no-repeat;height:600px;}
+.GUARANTEE{font-family: 'Poppins', sans-serif,Arial,sans-serif;}
+.GUARANTEE p{font-size:18px;}
+/*End  GUARANTEE*/
+/* start UNIVERSITIES WE WORK WITH*/
+.UNIVERSITIES .row:first-of-type div:nth-of-type(2) .btn{border-radius:20px;background-color:transparent;border:1px solid gray;}
+.UNIVERSITIES .row div .card{border-radius:0px;}
+.UNIVERSITIES .row div .card-img-top{border-top-left-radius:0px;border-top-right-radius:0px;}
+/* End UNIVERSITIES WE WORK WITH */
+/*Start YOUR FUTURE EMPLOYMENT*/
+.future .row:nth-child(2) div .btn{background-color:#1d94d8;width:150px;border-radius:5px;margin-bottom:10px;}
+.future .card img{margin-top:5px;}
+.future .card{background-color:#17589c}
+.Art,.Biotechnology,.Business,.Aerospace{display:none;}
+/*End YOUR FUTURE EMPLOYMENT*/
+/*Start FAQ*/
+.slide1-FAQ ,.slide2-FAQ,.slide3-FAQ,.slide4-FAQ,.slide5-FAQ,.slide6-FAQ,.slide7-FAQ,.slide8-FAQ{border:3px solid #cccccc;width:85%;border-radius:50px;}
+.slide1-FAQ a,.slide2-FAQ a,.slide3-FAQ a,.slide4-FAQ a,.slide5-FAQ a,.slide6-FAQ a,.slide7-FAQ a,.slide8-FAQ a{text-decoration:none;color:black;font-size:18px;line-height:0.2px;}
+.slide1-toggle,.slide2-toggle,.slide3-toggle,.slide4-toggle,.slide5-toggle,.slide6-toggle,.slide7-toggle,.slide8-toggle{display:none;}
+@media screen and (max-width:500px){
+	.mtt{margin-top:10px;}
+	.mbb{margin-bottom:10px;}
+	.ptt{padding-top:10px}
+}
+/*End FAQ*/
+/*Start Slide images*/
+.flickity-page-dots .dot{background:#f1be2f;}
+.flickity-prev-next-button.next,.flickity-prev-next-button.previous{display:none;}
+.flickity-page-dots {position: absolute;bottom:25px;}
+.flickity-page-dots .dot{border-radius:0px;width:20px;}
+.flickity-page-dots .dot.is-selected{border-radius:50%;width:10px;}
+.carousel-cell { width: 100%;height: 400px;opacity:0.8;margin-right: 10px;background: black;border-radius: 0px;
+  counter-increment: gallery-cell;}
+.carousel .card{background-color:transparent;border:none;}
+.carousel .card img{border-radius:50%;border:2px solid #f1be2f;}
+.carousel h5{color:#f1be2f;}
+/*End Slide images*/
+/*Start Contact Us*/
+.form-control,textarea{border-radius:10px;}
+.contact a{text-decoration:none;color:#fff;font-weight:bold;}
+.contact .btn{background-color:#f1be2f;border-radius:20px;}
+
+
+.facebook{background-color: #3b5998;}
+.fa-facebook{color: #3b5998;}
+.twitter{background-color: #00aff0;}
+.fa-twitter{color: #00aff0;}
+.instagram{background-color: #da2c80;}
+.fa-instagram{color: #da2c80;}
+
+.facebook,.twitter,.instagram{display: inline-block;width: 70px;height: 70px;line-height: 90px;margin: 0 10px;text-align: center; position: relative;overflow: hidden;border-radius: 50%;box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);opacity: 0.99;}
+.fa-facebook-f,.fa-twitter,.fa-instagram{font-size: 38px;vertical-align: middle;color:#fff;margin-bottom:15px;}
+/*End Contact Us*/
+
+
+
+

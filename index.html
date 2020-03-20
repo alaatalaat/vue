@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Vue.js</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/index.scss">
+	<!-- <link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/> -->
+
+</head>
+<body>
+<!-- start Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand py-0" href="#"><img src="images/logo (1).png" class=""></a>
+  <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	 <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <img src="images/English.png" width="20" height="15" class="float-left mt-1 mr-2">English
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><div><img src="images/Tiếng Việt.png" width="20" height="20" class="float-left mt-1 mr-1">
+			Tiếng Việt</div></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><div><img src="images/日本語.jpg" width="20" height="20" class="float-left mt-1 mr-1">日本語</div></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><div><img src="images/Español.png" width="20" height="20" class="float-left mt-1 mr-1">Español</div></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><div><img src="images/中文1.svg" width="20" height="20" class="float-left mt-1 mr-1">中文</div></a>
+        </div>
+      </li>
+  </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#contact" id="a-nav">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#FAQ" id="a-nav">FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#visa" id="a-nav">VISA</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#app3" id="a-nav">UNIVERSITIES</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#about" id="a-nav">ABOUT US</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link text-primary" href="#home" id="a-nav">HOME</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- end Navbar -->
+<!-- Start Home -->
+<div class="container-fluid home" id="home">
+	<div class="row ">
+		<div class="mr-auto ml-auto text-center text-white ">
+			<strong class="text-white font-weight-bolder">LIGHTHOUSE EDUCATION</strong>
+			<div class="dropdown-divider mx-auto mt-4" style="width: 50px;border-top:2px solid #f1be2f;"></div>
+			<p class="mt-4">Building dreams and a voyage to create a brilliant future</p>
+			<a  class="btn btn-primary px-5 py-3 font-weight-bold mt-4 mr-2"  href="#about">ABOUT US</a>
+			<a class=" btn btn-primary px-5 py-3 font-weight-bold mt-4 ml-2">CONTACT US</a>
+
+		</div>
+	</div>
+</div>
+<!-- End Home -->
+<!-- Start About us -->
+<div class="container mt-5" id="about">
+	<div class="row mt-5">
+		<div class="col-sm-12 col-md-5 col-lg-5 mt-5">
+			<img src="images/andy-charlotte.jpg" width="100%" height="230" class="mt-5">
+		</div>
+		<div class="col-sm-12 col-md-7 col-lg-7 mt-5">
+			<h1 class="text-uppercase font-weight-bold">about lighthouse <span>education</span></h1>
+			<div class="dropdown-divider" style="width: 50px;border-top:3px solid #f1be2f;margin-top:0px;"></div>
+			<p class="mt-4">Our dedicated team is committed to helping students see their dreams come true with a personalized and comprehensive service to study in USA. At Lighthouse Education we encourage students to pursue their interests, aim for excellence and attend a school that suits all of their requirements.</p>
+			<p>There are no consultancy fees.</p>
+			<p class="mt-1">You can read our company profile here(<a href="https://lighthousescholar.com/docs/Lighthouse_Education_Company_Profile.pdf" class="text-danger">PDF</a>)</p>
+		</div>
+	</div>
+</div>
+<!-- End About us -->
+<!--Start How we're different-->
+<div class="container mt-5 different">
+	<div class="row">
+		<div class="mx-auto">
+			<h1 class="text-center font-weight-bold">How we're different</h1>
+			<div class="dropdown-divider mx-auto mt-2" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+		</div>
+	</div>
+	<div class="row mt-5" id="app">
+		<different :card="firstDifferent"></different>
+		<different :card="secondDifferent"></different>
+		<different :card="thirdDifferent"></different>
+	</div>
+</div>
+<!--End How we're different-->
+<!-- Start OUR TEACHERS -->
+<div class="container-fluid our-teachers pb-5" id="app2">
+	<div class="container">
+	<div class="row">
+		<div class="mx-auto mt-4 mb-4">
+			<h1 class="font-weight-bold text-uppercase">our teachers and staff</h1>
+			<div class="dropdown-divider mx-auto mt-2" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+		</div>
+	</div>
+	<div class="row mx-auto" >
+		<info :person="firstCard"></info>
+		<info :person="secondCard"></info>
+		<info :person="thirdCard"></info>
+	</div>
+
+	<div class="row  mx-auto">
+		<info :person="forthCard"></info>
+		<info :person="fifthCard"></info>
+		<info :person="sixCard"></info>
+	</div>
+	<div class="row mx-auto">
+		<info :person="sevenCard"></info>
+		<info :person="eightCard"></info>
+		<info :person="nineCard"></info>
+	</div>
+	<div class="row  mx-auto">
+		<info :person="tenCard"></info>
+	</div>
+  </div>
+  </div>
+</div>
+<!-- End OUR TEACHERS -->
+<!--Start How does it work? -->
+<div class="container-fluid work pb-5">
+	<div class="container">
+		<div class="row">
+			<div class="text-center mx-auto text-white">
+				<h1 class="font-weight-bold">How does it work?</h1>
+				<h5 class="font-weight-bold">Lighthouse Education is the Easiest way to
+				attend school in the USA. We handle everything.</h5>
+			</div>
+	    </div>
+	    <div class="row mt-5">
+	    	<div class="text-center mt-5">
+	    		<img src="images/step-1.png" width="250" class="col-sm-6 col-md-2 mt-3">
+		    	<img src="images/step-2.png" width="250" class="col-sm-6 col-md-2 mt-2">
+		    	<img src="images/step-3.png" width="250" class="col-sm-6 col-md-2 mt-2">
+		    	<img src="images/step-4.png" width="250" class="col-sm-6 col-md-2 mt-2">
+		    	<img src="images/step-5.png" width="250" class="col-sm-6 col-md-2 mt-2"> 	
+	    	</div>
+		</div>
+	</div>
+</div>
+<!--End How does it work?-->
+<!-- Start TYPES OF STUDENTS WE CAN HELP -->
+<div class="container mt-5 types-of-student d-none d-xs-none d-sm-none d-md-block">
+	<div class="row">
+		<div class="text-center mx-auto">
+			<h1 class="font-weight-bold">TYPES OF STUDENTS WE CAN HELP</h1>
+			<div class="dropdown-divider mx-auto mt-2 pb-5" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+		</div>
+	</div>
+	<div class="row mt-5">
+		<div class="col-md-4 col-lg-4">
+			<div class="card ml-5 card-menu">
+			  <ul class="list-group list-group-flush text-white font-weight-bold">
+			    <li class="list-group-item py-4 university"><i class="fas fa-university"></i> UNIVERSITY STUDENT</li>
+			    <li class="list-group-item py-4 graduation-cap"><i class="fas fa-graduation-cap"></i> GRADUATE STUDENT</li>
+			    <li class="list-group-item py-4 school"><i class="fas fa-school"></i> HIGH SCHOOL STUDENT</li>
+			    <li class="list-group-item py-4 user-graduate"><i class="fas fa-user-graduate"></i> MIDDLE SCHOOL STUDENT</li>
+			    <li class="list-group-item py-4 torii-gate"><i class="fas fa-torii-gate"></i> ELEMENTARY STUDENT</li>
+			    <li class="list-group-item py-4 language"><i class="fas fa-language"></i> INTENSIVE ENGLISH</li>
+			    <li class="list-group-item py-4 anchor"><i class="fas fa-anchor"></i>  MILITARY STUDENT</li>
+			  </ul>
+			</div>
+		</div>
+		 <div class="col-md-8 col-lg-8 ml-auto">
+			<div id="university">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/univ-student1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/univ-student2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Get your bachelor's degree in USA</h4>
+				    <p class="text-muted mt-3">Here we provide assistance in directing College bound students with a focus of furthering their education toward their Associate’s and Bachelor’s degrees in their study of choice. Finding the schools that fit your needs is our primary goal. We will assist in providing those key locations.</p>
+				  </div>
+				</div>
+			</div>
+			<div id="graduation-cap">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/MBA_class.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/research_student.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Graduate Student.</h4>
+				    <p class="text-muted mt-3">Pursuing additional education in a specific field? More than 1,000 U.S. colleges and universities offer programs leading to a graduate degree in a wide range of fields. The two main graduate degrees in the U.S. are the master’s degree and the doctoral degree. We help make your school selection easy by learning what you want; do the research and come back with some selections to consider.</p>
+				  </div>
+				</div>
+			</div>
+			<div id="school">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/high_school1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/high_school2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">High School Student.</h4>
+				    <p class="text-muted mt-3">A high school education is important in many ways. Not only do you learn basic through accelerated studies, but a student will also gain social cues, have opportunities to participate in a variety of clubs, groups and plenty of sports activities</p>
+				  </div>
+				</div>
+			</div>
+			<div id="user-graduate">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/middle_school1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/middle_school2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Middle School Student.</h4>
+				    <p class="text-muted mt-3">Middle school education general covers grades 6-8 with students aged 10 through 14. Students learn independence, moving to different classrooms and teachers learning subjects that include math, sciences, language and physical education.</p>
+				  </div>
+				</div>
+			</div>
+			<div id="torii-gate">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/elementary1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/elementary2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Elementary School Student.</h4>
+				    <p class="text-muted mt-3">Elementary students gain understanding of basic concepts involved in learning to read, write and count. These concepts are reinforced through activities in and out of the classroom. Teaching is generally done in a one classroom with a single educator covering most subjects.</p>
+				  </div>
+				</div>
+			</div>
+			<div id="language">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/intensive_english1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/intensive_english2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Intensive English Student.</h4>
+				    <p class="text-muted mt-3">If you want to learn English fast then this the right path for you. Classes are about 25 hours per week and you will be able to communicate confidently in no time as you build English reading, writing, listening and speaking skills.</p>
+				  </div>
+				</div>
+			</div>
+			<div id="anchor">
+				<div class="card" style="height:100%;">
+				 	<div class="px-3">
+						  <img src="images/military1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/military2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Military Student.</h4>
+				    <p class="text-muted mt-3">There are 17 top military boarding schools located throughout the USA, serving 4,900 students.
+
+      The purpose of the Military schools is to inspire positive academic, physical, and moral growth in every cadet. All Military Academy’s college preparation curriculum is grounded in the core disciplines of:
+     Mathematics, Science, English, Social Science, Foreign Language</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End TYPES OF STUDENTS WE CAN HELP-->
+<!--Start TYPES OF STUDENTS WE CAN HELP Small screen-->
+<div class="first-dropdown-toggle">
+	<div class="row">
+		<div class="col-sm-12 p-0 d-block d-sm-block d-md-none">
+			<div class="accordion" id="accordionExample" style="width:100%;">
+  <div class="card">
+    <div class="" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle text-white d-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-university"></i> UNIVERSITY STUDENT
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+       		<div class="clearfix">
+						  <img src="images/univ-student1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/univ-student2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+			</div>
+			<div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Get your bachelor's degree in USA</h4>
+				    <p class="text-muted mt-3">Here we provide assistance in directing College bound students with a focus of furthering their education toward their Associate’s and Bachelor’s degrees in their study of choice. Finding the schools that fit your needs is our primary goal. We will assist in providing those key locations.</p>
+			</div>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <div class="" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         <i class="fas fa-graduation-cap"></i> GRADUATE STUDENT
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/MBA_class.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/research_student.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Graduate Student.</h4>
+				    <p class="text-muted mt-3">Pursuing additional education in a specific field? More than 1,000 U.S. colleges and universities offer programs leading to a graduate degree in a wide range of fields. The two main graduate degrees in the U.S. are the master’s degree and the doctoral degree. We help make your school selection easy by learning what you want; do the research and come back with some selections to consider.</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="card">
+    <div class="" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <i class="fas fa-school"></i> HIGH SCHOOL STUDENT
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/high_school1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/high_school2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				   	 <h4 class="card-title font-weight-bold" style="color:#1d94d8">High School Student.</h4>
+				    <p class="text-muted mt-3">A high school education is important in many ways. Not only do you learn basic through accelerated studies, but a student will also gain social cues, have opportunities to participate in a variety of clubs, groups and plenty of sports activities</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="card">
+    <div class="" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+         <i class="fas fa-user-graduate"></i> MIDDLE SCHOOL STUDENT
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/middle_school1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/middle_school2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Middle School Student.</h4>
+				    <p class="text-muted mt-3">Middle school education general covers grades 6-8 with students aged 10 through 14. Students learn independence, moving to different classrooms and teachers learning subjects that include math, sciences, language and physical education.</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="card">
+    <div class="" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+         <i class="fas fa-torii-gate"></i> ELEMENTARY STUDENT
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/elementary1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/elementary2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Elementary School Student.</h4>
+				    <p class="text-muted mt-3">Elementary students gain understanding of basic concepts involved in learning to read, write and count. These concepts are reinforced through activities in and out of the classroom. Teaching is generally done in a one classroom with a single educator covering most subjects.</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="card">
+    <div class="" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+         <i class="fas fa-language"></i> INTENSIVE ENGLISH
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/elementary1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/elementary2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Intensive English Student.</h4>
+				    <p class="text-muted mt-3">If you want to learn English fast then this the right path for you. Classes are about 25 hours per week and you will be able to communicate confidently in no time as you build English reading, writing, listening and speaking skills.</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="card">
+    <div class="" id="headingSeven">
+      <h2 class="mb-0">
+        <button class="btn dropdown-toggle  text-white d-block" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+         <i class="fas fa-anchor"></i>  MILITARY STUDENT
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+      <div class="card-body">
+       <div class="clearfix">
+						  <img src="images/elementary1.jpg" class="card-img-top mt-3 float-left" style="width:49%">
+						  <img src="images/elementary2.jpg" class="card-img-top mt-3 float-right" style="width:49%">
+					</div>
+				  <div class="card-body">
+				    <h4 class="card-title font-weight-bold" style="color:#1d94d8">Military Student.</h4>
+				    <p class="text-muted mt-3">There are 17 top military boarding schools located throughout the USA, serving 4,900 students. The purpose of the Military schools is to inspire positive academic, physical, and moral growth in every cadet. All Military Academy’s college preparation curriculum is grounded in the core disciplines of: Mathematics, Science, English, Social Science, Foreign Language</p>
+				  </div>
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+</div>
+<!--End TYPES OF STUDENTS WE CAN HELP Small screen-->
+<!-- Start  GUARANTEE-->
+<div class="container-fluid GUARANTEE mt-5">
+	<div class="container">
+		<div class="row">
+			<div class="mx-auto text-white text-center">
+				<img src="images/batch.png" class="mt-5">
+				<h1 class="font-weight-bold">100% GUARANTEE</h1>
+				<span class="font-weight-bold">GUARANTEED SCHOOL ACCEPTANCE:</span>
+				<p>We guarantee you will be accepted by a good school and will study in the USA.</p>
+				<span class="font-weight-bold">GUARANTEED VALUE:</span>
+				<p>We assist you with everything you need. Obtain USA Visa, Tuition, housing, orientation, excursions, insurance, airport pick up, and more.</p>
+				<span class="font-weight-bold">GUARANTEED SUPPORT:</span>
+				<p>Before, during and after you’ll be supported by a Lighthouse Education staff member. Our goal is a quick response to your questions before you go and even faster when you are in the USA.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End GUARANTEE -->
+<!-- Start UNIVERSITIES WE WORK WITH -->
+<div class="container UNIVERSITIES" id="app3">
+	<div class="row">
+		<div class="mx-auto mt-5">
+			<h1>UNIVERSITIES WE WORK WITH</h1>
+			<div class="dropdown-divider mx-auto mt-2" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+		</div>
+		<div class="mx-auto mt-5">
+				<button type="button" class="btn mt-2" id="one">TOP UNIVERSITIES</button>
+				<button type="button" class="btn mt-2" id="two">IT</button>
+				<button type="button" class="btn mt-2" id="three">ART</button>
+				<button type="button" class="btn mt-2" id="four">LAW</button>
+				<button type="button" class="btn mt-2" id="five">BUISINES</button>
+				<button type="button" class="btn mt-2" id="six">DENTAL</button>
+				<button type="button" class="btn mt-2" id="seven">SOCIAL WORKER</button>
+				<button type="button" class="btn mt-2" id="eight">ENVIRONMENTAL SCIENCE</button>
+		</div>
+	</div>
+	<div class="row mt-5 mx-auto">
+			<universities :universities="Universities1"></universities>
+			<universities :universities="Universities2"></universities>
+			<universities :universities="Universities3"></universities>
+			<universities :universities="Universities4"></universities>
+			<universities :universities="Universities5"></universities>
+			<universities :universities="Universities6"></universities>
+			<universities :universities="Universities7"></universities>
+			<universities :universities="Universities8"></universities>
+			<universities :universities="Universities9"></universities>
+			<universities :universities="Universities10"></universities>
+			<universities :universities="Universities11"></universities>
+			<universities :universities="Universities12"></universities>
+	</div><!--end second row-->
+
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities13"></universities>
+			<universities :universities="Universities14"></universities>
+			<universities :universities="Universities15"></universities>
+			<universities :universities="Universities16"></universities>
+			<universities :universities="Universities17"></universities>
+			<universities :universities="Universities18"></universities>
+			<universities :universities="Universities19"></universities>
+			<universities :universities="Universities20"></universities>
+			<universities :universities="Universities21"></universities>
+	</div><!--end third row-->
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities22"></universities>
+			<universities :universities="Universities23"></universities>
+			<universities :universities="Universities24"></universities>
+			<universities :universities="Universities25"></universities>
+			<universities :universities="Universities26"></universities>
+			<universities :universities="Universities27"></universities>
+			<universities :universities="Universities28"></universities>
+			<universities :universities="Universities29"></universities>
+			<universities :universities="Universities30"></universities>
+			<universities :universities="Universities31"></universities>
+			<universities :universities="Universities32"></universities>
+			<universities :universities="Universities33"></universities>
+	</div><!-- end forth row -->
+
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities34"></universities>
+			<universities :universities="Universities35"></universities>
+			<universities :universities="Universities36"></universities>
+			<universities :universities="Universities37"></universities>
+			<universities :universities="Universities38"></universities>
+			<universities :universities="Universities39"></universities>
+			<universities :universities="Universities40"></universities>
+			<universities :universities="Universities41"></universities>
+			<universities :universities="Universities42"></universities>
+			<universities :universities="Universities43"></universities>
+			<universities :universities="Universities44"></universities>
+			<universities :universities="Universities45"></universities>
+	</div><!-- end fifth row -->
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities46"></universities>
+			<universities :universities="Universities47"></universities>
+			<universities :universities="Universities48"></universities>
+			<universities :universities="Universities49"></universities>
+			<universities :universities="Universities50"></universities>
+			<universities :universities="Universities51"></universities>
+			<universities :universities="Universities52"></universities>
+			<universities :universities="Universities53"></universities>
+			<universities :universities="Universities54"></universities>
+			<universities :universities="Universities55"></universities>
+			<universities :universities="Universities56"></universities>
+			<universities :universities="Universities57"></universities>
+	</div><!-- end sixth row -->
+
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities82"></universities>
+			<universities :universities="Universities83"></universities>
+			<universities :universities="Universities84"></universities>
+			<universities :universities="Universities85"></universities>
+			<universities :universities="Universities86"></universities>
+			<universities :universities="Universities87"></universities>
+			<universities :universities="Universities88"></universities>
+			<universities :universities="Universities89"></universities>
+			<universities :universities="Universities90"></universities>
+			<universities :universities="Universities91"></universities>
+			<universities :universities="Universities92"></universities>
+			<universities :universities="Universities93"></universities>
+	</div><!-- end seven row -->
+
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities58"></universities>
+			<universities :universities="Universities59"></universities>
+			<universities :universities="Universities60"></universities>
+			<universities :universities="Universities61"></universities>
+			<universities :universities="Universities62"></universities>
+			<universities :universities="Universities63"></universities>
+			<universities :universities="Universities64"></universities>
+			<universities :universities="Universities65"></universities>
+			<universities :universities="Universities66"></universities>
+			<universities :universities="Universities67"></universities>
+			<universities :universities="Universities68"></universities>
+			<universities :universities="Universities69"></universities>
+	</div><!-- end eight row -->
+
+	<div class="row mt-5 mx-auto d-none">
+			<universities :universities="Universities70"></universities>
+			<universities :universities="Universities71"></universities>
+			<universities :universities="Universities72"></universities>
+			<universities :universities="Universities73"></universities>
+			<universities :universities="Universities74"></universities>
+			<universities :universities="Universities75"></universities>
+			<universities :universities="Universities76"></universities>
+			<universities :universities="Universities77"></universities>
+			<universities :universities="Universities78"></universities>
+			<universities :universities="Universities79"></universities>
+			<universities :universities="Universities80"></universities>
+			<universities :universities="Universities81"></universities>
+	</div><!-- end nine row -->
+</div>
+<!-- End UNIVERSITIES WE WORK WITH -->
+<!-- Start We make getting the visa easy for you -->
+<div class="container mt-5" id="visa">
+	<div class="row mt-5">
+		<div class="col-sm-12 col-md-6 mt-5">
+			<img src="images/visa.jpg" width="100%" class="rounded">
+		</div>
+		<div class="col-sm-12 col-md-6 mt-4">
+			<h1 class="font-weight-bold">We make getting the visa easy for you</h1>
+			<p style="font-size:18px;">We specialize in F1 Student Visas and applications for Tourist/Business Visas to the United States.</p>
+			<p>Our friendly and knowledgeable agents will help you prepare all the paperwork on your behalf, saving you hundreds of dollars in fees, and passing those savings on to you!</p>
+			<p>Our staff will also coach you through the interview process at the USA embassy, we will explain what you will do during the interview and make you familiar with common questions they will ask.</p>
+		</div>
+	</div>
+</div>
+<!-- End We make getting the visa easy for you -->
+<!-- Start YOUR FUTURE EMPLOYMENT -->
+<div class="container-fluid future mt-5" style="background-color:#17589c;">
+	<div class="row pt-5">
+			<div class="text-white mx-auto font-weight-bold mt-5">
+				<h2>YOUR FUTURE EMPLOYMENT</h2>
+				<div class="dropdown-divider mx-auto mt-3 mbb" style="width: 50px;border-top:3px solid #fff;"></div>
+			</div>
+	</div>
+	<div class="row">
+		<div class="mx-auto mt-5">
+				<button type="button" class="btn btn-info ml-2 py-2 font-weight-bold IT-btn">IT</button>
+				<button type="button" class="btn btn-info ml-2 py-2 font-weight-bold Art-btn">Art</button>
+				<button type="button" class="btn btn-info ml-2 py-2 font-weight-bold Biotechnology-btn">Biotechnology</button>
+				<button type="button" class="btn btn-info ml-2 py-2 font-weight-bold Business-btn">Business</button>
+				<button type="button" class="btn btn-info ml-2 py-2 font-weight-bold Aerospace-btn">Aerospace</button>
+			</div>
+	</div>
+	<!-- IT -->
+	<div class="container mt-5 IT pb-5">
+		<div class="row">
+			<div class="col-sm-12  col-md-12 col-lg-3 mb-5">
+				<div class="">
+					<img src="images/claim-image2.png" style="margin-left:100px;">
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-9">
+				<div class="ml-5">
+					
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/ficon.png" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Facebook</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Facebook needs software engineers from data scientists to web programmers.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/google.png" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Google</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">As the #1 search engine, Google employs thousands of software engineers.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/microsoft.png" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Microsoft</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Microsoft is always hiring top engineers to build world-class software used on <br> billions of devices.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/uber.png" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Uber</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">As one of the hottest tech startups, Uber continues to lead the world in software<br>services for peer-to-peer ridesharing, taxi cab, food delivery, bicycle-sharing, and<br>transportation network</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Art -->
+<div class="container mt-5 Art pb-5">
+		<div class="row ">
+			<div class="col-sm-12  col-md-12 col-lg-3  mb-5">
+				<div class="">
+					<img src="images/artist.jpg" style="width:300px;height:600px;margin-left:50px;">
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-9">
+				<div class="ml-5">
+					
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/merck.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Merck</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Merck & Co. manufactures a variety of well-known pharmaceutical drugs,<br> vaccines and animal-health products. It made the first smallpox vaccine for<br>commercial use in the U.S.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/pfizer.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Pfizer</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Pfizer is one of the world's largest pharmaceutical companies. They develop and<br>produce medicines and vaccines for a wide range of medical disciplines, including<br> immunology, oncology, cardiology, endocrinology, and neurology</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/gsk.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">GlaxoSmithKline</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">GlaxoSmithKline is a pharmaceutical company headquartered in London with<br> 100,000 employees.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/amgen.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">AMGEN</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Amgen is an American multinational biopharmaceutical company headquartered<br>in California. In 2013, the company's largest selling product lines were<br>Neulasta/Neupogen, two closely related drugs used to prevent infections in<br>patients undergoing cancer chemotherapy</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Biotechnology -->
+<div class="container mt-5 Biotechnology pb-5">
+		<div class="row">
+			<div class="col-sm-12  col-md-12 col-lg-3 mb-5">
+				<div class="">
+					<img src="images/biotech.jpg" style="width:300px;height:600px;margin-left:40px;">
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-9">
+				<div class="ml-5">
+					
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/pixar.png" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">PIXAR</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">An American computer animation film studio based in California, they have 19<br>Academy Awards for their animations.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/disney.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Disney</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Founded in 1923, today Disney is the world's largest independent media <br>conglomerate in terms of revenue and has made many hundreds of movies.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/blizzard.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Blizzard Entertainment</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Blizzard Entertainment is an American video game developer responsible for very<br>popular games such as World of Warcraft, Diaglo and Starcraft series</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/orchestra.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Boston Symphony Orchestra</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">The Boston Symphony Orchestra is an American orchestra based in Boston,<br>Massachusetts. Founded in 1890, it is one of the five major American symphony<br>transportation network</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Business -->
+<div class="container mt-5 Business pb-5">
+		<div class="row">
+			<div class="col-sm-12  col-md-12 col-lg-3 mb-5">
+				<div class="">
+					<img src="images/business (1).jpg" style="width:300px;height:600px;margin-left:30px;">
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-9">
+				<div class="ml-5">
+					
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/fedex.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">fedex</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Fedex is a public, multi-national courier delivery company located in Memphis,<br> Tennessee, that ships globally. International business students could join FedEx’s<br> community with the slogan “The World On Time.” Job categories include marketing,<br>IT, sales, human resources, and logistics management.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/amex.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">AmericanExpress</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Established in 1850, American Express is an international financial services firm with<br>a brand value estimated at $14.97 billion. Although headquartered in New York City,<br>American Express employs around 62,800 professionals in more than 40 countries.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/exxon.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Exxon</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">ExxonMobil Oil Corporation is the world’s largest, multi-national oil and gas refiner<br>with over $268 billion in revenue. International business students could be<br> interested in marketing, technology, refining, real estate, or finance positions. In<br>general, ExxonMobil provides rigorous training programs to bachelor’s-level<br>graduates.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/marriot.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Marriot</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Valued at $12.78 billion, Marriott International is a public, diversified hospitality<br>company founded in 1993 with headquarters in Bethesda, Maryland. In 2014,<br> Marriott opened its 4,000th hotel to offer over 697,000 rooms in 80 global countries.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Aerospace-->
+<div class="container mt-5 Aerospace pb-5">
+		<div class="row">
+			<div class="col-sm-12  col-md-12 col-lg-3 mb-5">
+				<div class="">
+					<img src="images/aerospace.jpg" style="width:300px;height:600px;margin-left:20px;">
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-9">
+				<div class="ml-5">
+					
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/boeing.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Boeing</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Boeing is an American corporation that designs, manufactures, and sells<br> airplanes, rockets, satellites, and missiles worldwide. Boeing is among the largest<br>global aircraft manufacturers; it is also the fifth-largest defense contractor in the<br>world based.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/spacex.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">SpaceX</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">SpaceX, is a private American aerospace manufacturer and space transportation<br>services company headquartered in California. It was founded in 2002 by<br> entrepreneur Elon Musk with the goal of reducing space transportation costs and<br>enabling the colonization of Mars.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/raytheon.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Raytheon</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">The Raytheon Company is a major U.S. defense contractor and industrial<br> corporation with core manufacturing concentrations in weapons and<br>military and commercial electronics.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+					</div>
+					<div class="card ml-5" style="border:none;">
+					  <div class="row no-gutters" style="background-color:#17589c;">
+					    <div class="">
+					      <img src="images/cessna.jpg" class="card-img" alt="...">
+					    </div>
+					    <div class="col-md-9">
+					      <div class="card-body" style="padding:0.75rem;">
+					        <h5 class="text-white font-weight-bold">Cessna</h5>
+					      </div>
+					    </div>
+					    <p style="color:#b7cbd5;">Best known for small, piston-powered aircraft, Cessna also produced business jets.<br>For many years the company was one of the highest-volume producers of general<br> aviation aircraft in the world.</p>
+					    <div class="dropdown-divider  mt-1" style="width: 80%;border-top:1px solid #b7cbd5;"></div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- End YOUR FUTURE EMPLOYMENT -->
+<!-- Start FAQ -->
+<div class="container mbb" id="FAQ">
+
+	<div class="row mt-5">
+		<div class="mx-auto text-center mt-5">
+			<h1 class="font-weight-bold">FAQ</h1>
+			<div class="dropdown-divider mx-auto mt-2" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+			<p class="mt-4" style="font-size:18px;">Here are the common questions our new clients have...</p>
+		</div>
+	</div>
+
+	<div class="row mt-4">
+		<div class="col-sm-12 col-md-6 mb-sm-2">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide1-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>How to help international students make a transition?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide1-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+						The key to the first year of high school students studying abroad is to test the key period of students' independent living and adaptability. Whether there is a good study abroad plan to help them make a good transition is the most concern of parents. Whether it is a boarding school or a school that provides accommodation for a family, no matter how many Chinese students there are or not, a good transition plan can make parents feel at ease. This kind of transition is not only about language ability, but also important life, including psychological counseling and support. Parents should take this as a priority.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 mtt">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide2-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>What are the characteristics of American community colleges ?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide2-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+						1. Practical course - provide the first two years of university courses, vocational training and community service<br>
+						2, personal attention - small class teaching less than 30 people<br>
+						3, low cost - annual tuition is only half of the four-year university<br>
+						4, two Way out – after two years of study, you can transfer to a four-year university for the<br>
+						third year. After completing the associate degree, you can enter the job market.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row mt-4 mt-sm-2">
+		<div class="col-sm-12 col-md-6 mb-sm-2">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide3-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>What are the common extracurricular activities for American high school students?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide3-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+					Common extracurricular activities include: school clubs, volunteers for the elderly, community services, etc. More American middle-class families will allow their children to participate in international competitions, world geography projects, and difficult sports competitions to fully develop their individual abilities and demonstrate family strength. Background promotion activities. The significance of these activities, regardless of their size, is to allow students to fully integrate into the community and society and learn to help each other and show themselves. The most touching background experience must be meaningful to the society, showing a spirit of feedback and a true experience of demonstrating leadership.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 mtt">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide4-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>What is the educationalphilosophy of American high schools?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide4-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+						1. Practical course - provide the first two years of university courses, vocational training and community service<br>
+						2, personal attention - small class teaching less than 30 people<br>
+						3, low cost - annual tuition is only half of the four-year university<br>
+						4, two Way out – after two years of study, you can transfer to a four-year university for the<br>
+						third year. After completing the associate degree, you can enter the job market.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<div class="row mt-4">
+		<div class="col-sm-12 col-md-6 mb-sm-2">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide5-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>What is the US university application proocess?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide5-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+					US university application process to participate in standardized entrance exams – select schools – prepare letters of recommendation – prepare personal statements – prepare resumes – provide school transcripts – other supporting materials – proof of financial guarantees – formally submit applications – get admission notices from schools.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 mtt">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide6-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>Is studying in the United States really demanding English?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide6-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+					Absolutely not what you imagined!
+					Some schools do not have high English requirements for international students because they have excellent ESL (English non-native) courses that will help you successfully meet English requirements. Some schools have high requirements for English because they do not have an ESL program. Our institution also offers English language instruction. Before you study in the United States, we have begun to tailor the English course to help you improve your English. We offer excellent English-speaking teachers.
+	
+					</p>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="row mt-4">
+		<div class="col-sm-12 col-md-6 mb-sm-2">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide7-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>What are the advantages of community colleges?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide7-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+					1. Shortcuts to enter a famous American school<br>
+					2. Strong English course<br>
+					3. Open entrance<br>
+					4. Short application time<br>
+					5. Easy to apply for admission to school<br>
+					6. Professional, practical and flexible competition<br>
+					7. Excellent small class teaching and meticulous service
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 mtt">
+			<div>
+				<div class=" px-5 mx-auto py-1 slide8-FAQ dropleft"><a href="#"><span class="dropdown-toggle"></span>How to choose an AP<br>course?</a></div>
+				<div class=" px-4 mt-4 ml-5 slide8-toggle" style="border-left:5px solid #f1be2f;">
+					<p>
+					Parents are becoming more familiar with the processes and requirements of American high school universities. They are well aware that AP courses are not only helpful when applying for university, but the number of AP courses can also indicate the strength of a school. Of course, here is also to clarify a misunderstanding. It is not the more AP courses, the better. It depends on whether the courses offered are of interest to students and can really learn. Only good AP results can really help students apply for universities. . Therefore, class selection is very important for high school students. Need to be very familiar with and understand the American education system. Many domestic intermediaries can hardly do this very critical VIP service.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>
+<!-- End FAQ -->
+<!-- Start SLide images -->
+<div class="carousel mt-5" data-flickity>
+  <div class="carousel-cell mt-5">
+	  	<div class="container-fluid py-lg-5">
+	  		<div class="container mt-5">
+	  			<div class="row mt-5">
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/williamson.jpg" width="100" height="100">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">Williamson</h5>
+				        <span class="text-white">City University of Seattle</span>
+				        <p class="card-text text-white mt-3">I really appreciate that they helped me with everything to get a part time job in the office at the Toyota dealership, I am learning real business skills. I can learn on the job while studying for MBA at school</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3" style="max-width: 540px;">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/kristina.jpg">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">HaiQin</h5>
+				        <span class="text-white">Mother</span>
+				        <p class="card-text text-white mt-3">Andy listened carefully to my family's needs and guided us to a good high school. He found the most caring and wonderful homestay family for my son.</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	  		</div>	
+	  	</div>
+	</div> 
+  </div>
+
+  <div class="carousel-cell mt-5">
+	  <div class="container-fluid py-lg-5">
+	  		<div class="container mt-5">
+	  			<div class="row mt-5">
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/garvin.jpg" width="100" height="100">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">GARVIN</h5>
+				        <span class="text-white">Texas Tech University</span>
+				        <p class="card-text text-white mt-3">Andy and his team helped me live my dreams, studying Computer Science and choosing a school I can also continue my athletic career. My eyes have been opened to many new things and I’m meeting people from all over the world.
+</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3" style="max-width: 540px;">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/shirley.jpg">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">SHIRELY</h5>
+				        <span class="text-white">St. Joseph High School</span>
+				        <p class="card-text text-white mt-3">Hello, my name is Shirley. Coming to Saint Joseph is the best thing I have ever done. Every class, teacher and classmate is making me feel confident in my new life.</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	  		</div>	
+	  	</div>
+	</div> 
+  </div>
+
+  <div class="carousel-cell mt-5">
+  	<div class="container-fluid py-lg-5">
+	  		<div class="container mt-5">
+	  			<div class="row mt-5">
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/shirley.jpg" width="100" height="100">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">SHIRELY</h5>
+				        <span class="text-white">St. Joseph High School</span>
+				        <p class="card-text text-white mt-3">Hello, my name is Shirley. Coming to Saint Joseph is the best thing I have ever done. Every class, teacher and classmate is making me feel confident in my new life.</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<div>
+				<div class="card mb-3" style="max-width: 540px;">
+				  <div class="row no-gutters">
+				    <div class="col-md-3">
+				      <img src="https://lighthousescholar.com/img/ruby.jpg">
+				    </div>
+				    <div class="col-md-8">
+				      <div class="card-body">
+				        <h5 class="card-title font-weight-bold" style="font-size:25px;">RUBY</h5>
+				        <span class="text-white">Seattle University</span>
+				        <p class="card-text text-white mt-3">They helped my English a lot before I travelled to United States. I started my Seattle University classes sooner.</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	  		</div>	
+	  	</div>
+	</div>
+  </div>
+</div>
+<!-- End Slide images -->
+<!-- Start Contact Us -->
+<div class="container contact" id="contact">
+	<div class="row">
+		<div class="mx-auto text-center mt-5">
+			<h1 class="font-weight-bold">LET'S GET IN TOUCH!</h1>
+			<div class="dropdown-divider mx-auto mt-2" style="width: 50px;border-top:3px solid #f1be2f;"></div>
+			<p class="mt-4">Please let us know any questions and ideas you may have, we will be waiting for your<br>inquiry here.</p>
+		</div>
+	</div>
+	<div class="row mt-3">
+		<div class="col-sm-12 col-md-4 text-center mt-3">
+			<div><i class="fas fa-phone mb-3" style="font-size:50px;"></i></div>
+			<span>+1425.417.1496</span>
+		</div>
+		<div class="col-sm-12 col-md-4 text-center mt-3">	
+			<div><i class="fas fa-envelope mb-3" style="font-size:50px;"></i></div>
+			<span>andy@lighthousescholar.com</span>
+		</div>
+		<div class="col-sm-12 col-md-4 text-center mt-3">
+			<div><i class="fab fa-whatsapp mb-3" style="font-size:50px;"></i></div>
+			<span>+1 425.417.1496</span><br>
+			<span>Whatsapp</span>
+		</div>
+	</div>
+
+	<div class="row mt-5 mx-auto">
+		<div class="col-sm-12 col-md-6 mt-2">
+			<div>
+			    <div class="form-group col-md-10 ml-md-5">
+			      <input type="text" class="form-control mt-2" placeholder="Name"> 
+			      <input type="email" class="form-control mt-3" placeholder="Email"> 
+			      <input type="text" class="form-control mt-3" placeholder="Phone">
+			    </div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 mt-2">
+			 <div class="col-md-10">
+			 	<textarea rows="8" cols="49" placeholder="  Message" class="mt-2"></textarea>
+			 </div>
+		</div>
+	</div>
+	<div class="text-center mt-2"><button class="btn px-5"><a href="#">Send Message</a></button></div>
+	<div class="row my-2">
+		<div class="mx-auto mt-5">
+		    <span class="facebook"><i class="fab fa-facebook-f"></i></span>
+		    <span class="twitter"><i class="fab fa-twitter"></i></span>
+		    <span class="instagram"><i class="fab fa-instagram"></i></span>
+		</div>
+	</div>
+</div>
+<!-- End Contact Us -->
+<div class="container-fluid mt-5 py-3" style="background-color:#212529;">
+	<div class="row">
+		<div class="text-white mx-auto">
+			COPYRIGHT © 2019 LIGHTHOUSE EDUCATION.
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>-->
+<script  src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/popper.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
